@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.mathislaurent.features.contest.ContestScreen
 import com.mathislaurent.features.home.HomeScreen
 import com.mathislaurent.features.launcher.LauncherScreen
 import com.mathislaurent.features.onboarding.OnBoardingScreen
@@ -27,7 +28,11 @@ fun MainNavigationGraph(
             )
         }
         composable(MainNavigationItems.HomeNavItem.screenRoute) {
-            HomeScreen()
+            HomeScreen(
+                openContest = {
+                    navController.navigate(MainNavigationItems.ContestNavItem.screenRoute)
+                }
+            )
         }
         composable(MainNavigationItems.OnBoardingNavItem.screenRoute) {
             OnBoardingScreen(
@@ -35,6 +40,9 @@ fun MainNavigationGraph(
                     navController.navigate(MainNavigationItems.HomeNavItem.screenRoute)
                 }
             )
+        }
+        composable(MainNavigationItems.ContestNavItem.screenRoute) {
+            ContestScreen()
         }
     }
 }
