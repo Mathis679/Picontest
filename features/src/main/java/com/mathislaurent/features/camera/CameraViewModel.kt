@@ -25,6 +25,7 @@ class CameraViewModel(
         }
         viewModelScope.launch(handler) {
             saveBitmapUseCase(bitmap)
+            //TODO display loading
             _finishCamera.update {
                 true
             }

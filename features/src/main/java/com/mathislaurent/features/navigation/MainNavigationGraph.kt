@@ -42,7 +42,11 @@ fun MainNavigationGraph(
             )
         }
         composable(MainNavigationItems.ContestNavItem.screenRoute) {
-            ContestScreen()
+            ContestScreen(
+                onClose = {
+                    navController.popBackStack()
+                }
+            )
         }
     }
 }
