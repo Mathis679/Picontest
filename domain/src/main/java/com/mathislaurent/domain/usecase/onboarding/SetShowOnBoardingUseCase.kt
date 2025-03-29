@@ -8,7 +8,9 @@ class SetShowOnBoardingUseCase(
     private val repository: OnBoardingRepository,
     private val dispatcher: CoroutineDispatcher
 ) {
-    suspend operator fun invoke() = withContext(dispatcher) {
-        repository.setShowOnBoarding(false)
+    suspend operator fun invoke() {
+        withContext(dispatcher) {
+            repository.setShowOnBoarding(false)
+        }
     }
 }

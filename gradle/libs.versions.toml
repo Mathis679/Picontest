@@ -14,6 +14,8 @@ koin = "4.0.3"
 navigationCompose = "2.8.9"
 lottie = "6.6.4"
 datastore = "1.1.4"
+cameraX = "1.4.2"
+coil = "3.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,6 +40,12 @@ koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", versi
 koin-compose-navigation = { group = "io.insert-koin", name = "koin-androidx-compose-navigation", version.ref = "koin" }
 lottie = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie" }
 datastore = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+camerax-core = { group = "androidx.camera", name = "camera-core", version.ref = "cameraX" }
+camerax-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "cameraX" }
+camerax-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraX" }
+camerax-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraX" }
+camerax-extensions = { group = "androidx.camera", name = "camera-extensions", version.ref = "cameraX" }
+coil = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
