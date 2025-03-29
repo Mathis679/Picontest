@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Picontest</string>
+    <string name="demo_access">Démo access</string>
+    
+    <string name="onboarding_step1_title">Welcome</string>
+    <string name="onboarding_step1_content">To Picontest, the app designed for photo enthusiasts with a competitive spirit.</string>
+
+    <string name="onboarding_step2_title">How ?</string>
+    <string name="onboarding_step2_content">During the week, everyone takes their best photos from the app.</string>
+
+    <string name="onboarding_step3_title">The contest</string>
+    <string name="onboarding_step3_content">Once per week, you’ll receive a notification to choose one of your photos previously taken.</string>
+
+    <string name="onboarding_step4_title">Rules</string>
+    <string name="onboarding_step4_content">When you’ll select one picture, you’ll have to rate 10 random photos of other users.</string>
+
+    <string name="onboarding_step5_title">Finally</string>
+    <string name="onboarding_step5_content">Then you’ll see the final ranking in the app and enjoy to see the top-rated photos.</string>
+
+    <string name="onboarding_continue">Continue</string>
+    <string name="onboarding_finish">Finish</string>
+</resources>

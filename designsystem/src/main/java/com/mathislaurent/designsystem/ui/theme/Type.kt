@@ -17,9 +17,12 @@ val Typography = Typography(
     titleLarge = TextStyle(
         fontFamily = RochesterRegular,
         fontWeight = FontWeight.Normal,
-        fontSize = 22.sp,
-        lineHeight = 28.sp,
-        letterSpacing = 0.sp
+        fontSize = 52.sp
+    ),
+    titleMedium = TextStyle(
+        fontFamily = RochesterRegular,
+        fontWeight = FontWeight.Normal,
+        fontSize = 32.sp
     ),
     labelSmall = TextStyle(
         fontFamily = PoppinsRegular,
@@ -30,7 +33,7 @@ val Typography = Typography(
     ),
     labelLarge = TextStyle(
         fontFamily = PoppinsBold,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.Bold,
         fontSize = 16.sp,
         lineHeight = 22.sp,
         letterSpacing = 0.5.sp

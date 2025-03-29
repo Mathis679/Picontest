@@ -13,5 +13,5 @@ val PoppinsBold = FontFamily(
 )
 
 val RochesterRegular = FontFamily(
-    Font(resId = R.font.poppins_regular)
+    Font(resId = R.font.rochester_regular)
 )
