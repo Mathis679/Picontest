@@ -22,7 +22,7 @@ class PhotoRepositoryImpl(
     private fun generateListPhotoRate(): List<RatePhoto> {
         val nbPhotosToRate = 10
         val list = mutableListOf<RatePhoto>()
-        for (i in 0..nbPhotosToRate) {
+        for (i in 0 until nbPhotosToRate) {
             list.add(
                 RatePhoto(
                     url = "https://picsum.photos/900/1600"
@@ -35,7 +35,7 @@ class PhotoRepositoryImpl(
     private fun generateListRankedPhotos(): List<RankPhoto> {
         val nbRankedPhotos = 10
         val list = mutableListOf<RankPhoto>()
-        for (i in 0..nbRankedPhotos) {
+        for (i in 0 until nbRankedPhotos) {
             list.add(
                 RankPhoto(
                     url = "https://picsum.photos/900/1600",
