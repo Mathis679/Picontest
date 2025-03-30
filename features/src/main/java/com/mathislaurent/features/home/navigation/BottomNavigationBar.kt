@@ -1,7 +1,7 @@
 package com.mathislaurent.features.home.navigation
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddCircle
+import androidx.compose.material.icons.filled.Camera
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
@@ -49,7 +49,7 @@ fun BottomNavigationBar(
             },
             icon = {
                 Icon(
-                    imageVector = Icons.Filled.AddCircle,
+                    imageVector = Icons.Filled.Camera,
                     contentDescription = "Camera"
                 )
             },

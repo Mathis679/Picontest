@@ -59,6 +59,8 @@ dependencies {
     implementation(libs.camerax.view)
     implementation(libs.camerax.extensions)
     implementation(libs.coil)
+    implementation(libs.coil.network)
+    implementation(libs.material.icons)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
