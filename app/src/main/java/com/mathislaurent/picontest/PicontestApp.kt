@@ -2,6 +2,7 @@ package com.mathislaurent.picontest
 
 import android.app.Application
 import com.mathislaurent.core.di.dispatchersModule
+import com.mathislaurent.data.di.dataSourceModule
 import com.mathislaurent.data.di.preferenceModule
 import com.mathislaurent.data.di.repositoryModule
 import com.mathislaurent.domain.di.useCaseModule
@@ -29,6 +30,7 @@ class PicontestApp: Application() {
             viewModelsModule,
             preferenceModule,
             repositoryModule,
+            dataSourceModule,
             useCaseModule
         )
     }
