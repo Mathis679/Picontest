@@ -44,7 +44,7 @@ fun RateContent(
             RateViewModel.RateUiState.Loading -> {
                 PCLoader(
                     modifier = Modifier
-                        .fillMaxWidth()
+                        .fillMaxSize()
                 )
             }
             is RateViewModel.RateUiState.Success -> {

@@ -8,11 +8,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Camera
 import androidx.compose.material.icons.filled.SwitchCamera
+import androidx.compose.material3.FabPosition
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
@@ -23,7 +24,21 @@ fun CameraContent(
 ) {
 
 
-    Scaffold { innerPadding ->
+    Scaffold(
+        floatingActionButtonPosition = FabPosition.Center,
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = {
+                    takePhoto()
+                }
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Camera,
+                    contentDescription = "Take photo"
+                )
+            }
+        }
+    ) { innerPadding ->
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -47,19 +62,6 @@ fun CameraContent(
                 Icon(
                     imageVector = Icons.Default.SwitchCamera,
                     contentDescription = "Switch camera"
-                )
-            }
-
-            IconButton(
-                modifier = Modifier
-                    .align(Alignment.BottomCenter),
-                onClick = {
-                    takePhoto()
-                }
-            ) {
-                Icon(
-                    imageVector = Icons.Default.Camera,
-                    contentDescription = "Take photo"
                 )
             }
         }

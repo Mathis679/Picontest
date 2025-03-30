@@ -38,7 +38,7 @@ fun RankingContent(
             RankingViewModel.RankingUiState.Loading -> {
                 PCLoader(
                     modifier = Modifier
-                        .fillMaxWidth()
+                        .fillMaxSize()
                 )
             }
             is RankingViewModel.RankingUiState.Success -> {
