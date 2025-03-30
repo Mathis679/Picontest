@@ -19,6 +19,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mathislaurent.designsystem.ui.theme.PicontestTheme
 import org.koin.androidx.compose.koinViewModel
 import org.koin.compose.KoinContext
@@ -36,16 +37,18 @@ class CameraActivity: ComponentActivity() {
                 val bitmapToShow = remember {
                     mutableStateOf<Bitmap?>(null)
                 }
+                val uiState = viewModel.uiState.collectAsStateWithLifecycle().value
 
                 PicontestTheme {
                     LaunchedEffect(Unit) {
-                        viewModel.finishCamera.collect {
-                            if (it) {
+                        viewModel.uiState.collect {
+                            if (it.finishCamera) {
                                 finish()
                             }
                         }
                     }
                     CameraScreen(
+                        showLoading = uiState.showLoading,
                         bitmapToShow = bitmapToShow.value,
                         takePhoto = { controller ->
                             takePhoto(

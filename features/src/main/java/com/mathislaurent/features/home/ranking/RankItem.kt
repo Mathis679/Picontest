@@ -39,8 +39,8 @@ fun RankItem(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(photo.url)
                 .crossfade(true)
-                .memoryCachePolicy(CachePolicy.DISABLED)
-                .diskCachePolicy(CachePolicy.DISABLED)
+                .memoryCacheKey("${photo.url}/${photo.rank}/${photo.ownerName}")
+                .diskCacheKey("${photo.url}/${photo.rank}/${photo.ownerName}")
                 .build(),
             contentDescription = "image",
             contentScale = ContentScale.Fit

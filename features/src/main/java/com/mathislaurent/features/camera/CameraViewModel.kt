@@ -15,8 +15,15 @@ class CameraViewModel(
     private val saveBitmapUseCase: SaveBitmapUseCase
 ): ViewModel() {
 
-    private val _finishCamera = MutableStateFlow<Boolean>(false)
-    val finishCamera: StateFlow<Boolean> = _finishCamera
+    data class CameraUiState(
+        val finishCamera: Boolean = false,
+        val showLoading: Boolean = false
+    )
+
+    private val _uiState = MutableStateFlow<CameraUiState>(
+        CameraUiState()
+    )
+    val uiState: StateFlow<CameraUiState> = _uiState
 
     fun onSavePhoto(bitmap: Bitmap) {
         val handler = CoroutineExceptionHandler { _, exception ->
@@ -24,10 +31,12 @@ class CameraViewModel(
             exception.printStackTrace()
         }
         viewModelScope.launch(handler) {
+            _uiState.update {
+                it.copy(showLoading = true)
+            }
             saveBitmapUseCase(bitmap)
-            //TODO display loading
-            _finishCamera.update {
-                true
+            _uiState.update {
+                it.copy(finishCamera = true)
             }
         }
     }

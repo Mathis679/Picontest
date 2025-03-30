@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material3.Icon
@@ -19,9 +18,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.unit.dp
+import com.mathislaurent.designsystem.ui.components.PCLoader
 
 @Composable
 fun PhotoPreviewScreen(
+    showLoading: Boolean,
     bitmap: Bitmap,
     onAccept: () -> Unit,
     onDecline: () -> Unit
@@ -63,6 +64,13 @@ fun PhotoPreviewScreen(
                     contentDescription = "Accept"
                 )
             }
+        }
+
+        if (showLoading) {
+            PCLoader(
+                modifier = Modifier
+                    .align(Alignment.Center)
+            )
         }
     }
 }

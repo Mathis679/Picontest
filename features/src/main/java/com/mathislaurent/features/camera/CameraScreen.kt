@@ -10,6 +10,7 @@ import com.mathislaurent.features.camera.photopreview.PhotoPreviewScreen
 
 @Composable
 fun CameraScreen(
+    showLoading: Boolean,
     bitmapToShow: Bitmap?,
     takePhoto: (LifecycleCameraController) -> Unit,
     onDeclinePhoto: () -> Unit,
@@ -26,6 +27,7 @@ fun CameraScreen(
 
     if (bitmapToShow != null) {
         PhotoPreviewScreen(
+            showLoading = showLoading,
             bitmap = bitmapToShow,
             onDecline = {
                 onDeclinePhoto()

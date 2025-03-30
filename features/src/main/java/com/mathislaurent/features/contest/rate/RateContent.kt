@@ -1,18 +1,15 @@
 package com.mathislaurent.features.contest.rate
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -24,11 +21,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.snapshotFlow
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.mathislaurent.designsystem.ui.components.PCLoader
 import com.mathislaurent.designsystem.ui.components.PTButton
 import com.mathislaurent.designsystem.ui.theme.PicontestTheme
 import com.mathislaurent.domain.entity.RatePhoto
@@ -45,16 +42,10 @@ fun RateContent(
     Scaffold { innerPadding ->
         when (uiState) {
             RateViewModel.RateUiState.Loading -> {
-                Box(
+                PCLoader(
                     modifier = Modifier
                         .fillMaxWidth()
-                ) {
-                    CircularProgressIndicator(
-                        modifier = Modifier
-                            .size(150.dp)
-                            .align(Alignment.Center)
-                    )
-                }
+                )
             }
             is RateViewModel.RateUiState.Success -> {
                 PagerRateContent(
