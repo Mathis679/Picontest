@@ -26,8 +26,7 @@ fun OnBoardingStep(
     val lottieComposition = rememberLottieComposition(LottieCompositionSpec.RawRes(step.lottieAnim))
     Column(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp),
+            .fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
