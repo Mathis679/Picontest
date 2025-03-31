@@ -24,7 +24,8 @@
         <activity
             android:name="com.mathislaurent.features.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Picontest">
+            android:theme="@style/Theme.Picontest"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +35,8 @@
         <activity
             android:name="com.mathislaurent.features.camera.CameraActivity"
             android:exported="true"
-            android:theme="@style/Theme.Picontest"/>
+            android:theme="@style/Theme.Picontest"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
